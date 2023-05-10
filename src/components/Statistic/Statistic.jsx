@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   StatisticItem,
   StatisticLayout,
@@ -22,4 +24,12 @@ export const Statistic = ({
       </StatisticList>
     </StatisticLayout>
   );
+};
+
+Statistic.propTypes = {
+  good: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };
